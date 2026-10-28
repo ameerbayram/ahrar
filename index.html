@@ -147,7 +147,6 @@
             135deg,
             rgba(10, 63, 53, 0.95),
             rgba(15, 92, 77, 0.85)
-            
           ),
           repeating-linear-gradient(45deg, #0f5c4d 0 24px, #0d5446 24px 48px);
       }
@@ -367,7 +366,6 @@
         width: 100%;
         height: auto;
       }
-      
       .stage svg {
         position: absolute;
         inset: 0;
@@ -646,11 +644,9 @@
     </header>
 
     <main id="top">
-       
       <div class="hero">
-       
         <div class="wrap">
-        <span class="tag">📍 محافظة الناصرية – ذي قار</span>
+          <span class="tag">📍 محافظة الناصرية – ذي قار</span>
           <h1>احلم نجعل حلمك حقيقة <span>مجمع الأحرار السكني</span></h1>
           <p>
             تعرّف على المخطط العام للمجمع وتصفّح الدور والبلوكات، واستفسر عن
@@ -659,20 +655,19 @@
           <div class="bt">
             <a href="#map" class="btn b1">تصفّح المخطط العام</a
             ><a href="#contact" class="btn b2">تواصل معنا</a>
-            </div>
+          </div>
         </div>
-         
       </div>
 
       <div class="stats">
         <div class="wrap">
-          <div class="stat"><b id="s-total">235</b><h3>دار سكنية</h3></div>
+          <div class="stat"><b id="s-total">–</b><small>دار سكنية</small></div>
           <div class="stat">
-            <b id="s-blocks">6</b><h3>نماذج سكنية</h3>
+            <b id="s-blocks">–</b><small>نماذج سكنية</small>
           </div>
         </div>
       </div>
-<br><br>
+
       <section id="about">
         <div class="wrap about">
           <div class="img">
@@ -700,9 +695,7 @@
           </div>
         </div>
       </section>
-      <br><br>
-      <section id="blocks">
-        <div class="stats">  
+      <div class="stats">  
          <h1 style="text-align: center;">البلوكات</h1>  
         <div class="wrap">
           
@@ -776,11 +769,11 @@
               <img class="side-img" src="images/a4-s2.png" alt="النموذج A4 - صورة 2" style="height: 500px;"/>
             </template>
           </div></a>
-          <a href="#"><div class="stat model" data-model="A5" title="اضغط لعرض المواصفات"><h3>نموذج</h3><b>A5</b><h4>المساحة 
-              <img src="images/a-5.png" alt="" style="width: 150px;height: 75px;border-radius: 10%;">الكلية 200م<sup>2</sup></h4>
+          <a href="#"><div class="stat model" data-model="A6" title="اضغط لعرض المواصفات"><h3>نموذج</h3><b>A6</b><h4>المساحة 
+              <img src="images/a-5.png" alt="" style="width: 150px;height: 75px;border-radius: 10%;">الكلية 215م<sup>2</sup></h4>
             <template>
               <ul class="spec-list">
-               <li><span>المساحة </span><b>200 م²</b></li>
+               <li><span>المساحة </span><b>215 م²</b></li>
                <li><span>المساحة الكلية للبناء</span><b>315 م²</b></li>
                 <li><span>غرف النوم</span><b>4</b></li>
                 <li><span>صالة</span><b>2</b></li>
@@ -823,37 +816,67 @@
           </div>
         </div>
       </div>
-      
-      </section>
-
-
-
-         <section id="features" class="alt">
+   <section id="blocks" class="alt">
         <div class="wrap">
           <div class="sh">
-           
-            <h1>مميزات المجمع</h1>
+            <small>البلوكات</small>
+            <h2>تصفّح الدور حسب البلوك</h2>
+            <p>اضغط على بلوك لإبرازه على المخطط العام.</p>
+          </div>
+          <div class="blocks" id="blocks"></div>
+        </div>
+      </section>
+
+      <section id="map">
+        <div class="wrap">
+          <div class="sh">
+            <small>المخطط العام</small>
+            <h2>استعرض دور المجمع</h2>
+            <p>مرّر المؤشر أو اضغط على أي دار لمعرفة رقمها.</p>
+          </div>
+          <div class="tools">
+            <div></div>
+            <div class="chips">
+              <button class="chip" id="f-clr">إلغاء تحديد البلوك</button>
+            </div>
+          </div>
+          <div class="map">
+            <div class="stage">
+              <img src="sitplan.png" alt="مخطط المجمع" /><svg
+                id="svg"
+                viewBox="0 0 1145 729"
+              ></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="alt">
+        <div class="wrap">
+          <div class="sh">
+            <small>لماذا الأحرار؟</small>
+            <h2>مميزات المجمع</h2>
           </div>
           <div class="feat">
             <div class="f">
               <div class="ic">🛡️</div>
-              <h3>أمان وخصوصية</h3>
+              <h4>أمان وخصوصية</h4>
               <p>مدخل منظم وحراسة دائمة.</p>
             </div>
             <div class="f">
               <div class="ic">🌳</div>
-              <h3>مساحات خضراء</h3>
+              <h4>مساحات خضراء</h4>
               <p>حدائق ومتنزهات للعائلة.</p>
             </div>
             <div class="f">
               <div class="ic">⚡</div>
-              <h3>بنى تحتية حديثة</h3>
+              <h4>بنى تحتية حديثة</h4>
               <p>ماء وكهرباء وطرق مخططة.</p>
             </div>
             <div class="f">
               <div class="ic">🕌</div>
-              <h3>خدمات قريبة</h3>
-              <p>مدارس وأسواق ومرافق عامة ومحطة غاز.</p>
+              <h4>خدمات قريبة</h4>
+              <p>مدارس وأسواق ومرافق عامة.</p>
             </div>
           </div>
         </div>
