@@ -1,0 +1,2453 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مجمع الأحرار السكني – الناصرية</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fff;
+        --card: #fff;
+        --text: #010e47;
+        --muted: #5d6b70;
+        --pri: #0f5c4d;
+        --pri-d: #0a3f35;
+        --acc: #c8963e;
+        --line: #e6dfd2;
+        --av: #1faa59;
+        --re: #f0a400;
+        --so: #d6362f;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #060130;
+          --card: #15262a;
+          --text: #eef1ee;
+          --muted: #9fb0b0;
+          --pri: #2fa88f;
+          --pri-d: #1d7a68;
+          --acc: #e0b05a;
+          --line: #25393d;
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 72px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        font-family: Cairo, Tahoma, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.8;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: auto;
+        padding: 0 20px;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: var(--card);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 68px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+        color: var(--pri);
+        font-size: 1.15rem;
+      }
+      .logo i {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--pri);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-style: normal;
+      }
+      .logo xxx {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--pri);
+        color: #fff;
+        display: grid;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 24px;
+        padding: 0;
+      }
+      nav a {
+        font-weight: 600;
+        color: var(--muted);
+      }
+      nav a:hover {
+        color: var(--pri);
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 26px;
+        border-radius: 12px;
+        font-weight: 700;
+        border: 2px solid transparent;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 700;
+        transition: 0.2s;
+      }
+      .b1 {
+        background: var(--acc);
+        color: #1d1608;
+      }
+      .b1:hover {
+        transform: translateY(-2px);
+      }
+      .b2 {
+        border-color: #fff;
+        color: #fff;
+      }
+      .b2:hover {
+        background: #fff;
+        color: var(--pri-d);
+      }
+      .b3 {
+        background: var(--pri);
+        color: #fff;
+      }
+      .hero {
+        color: #fff;
+        padding: 100px 0 120px;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(10, 63, 53, 0.95),
+            rgba(15, 92, 77, 0.85)
+            
+          ),
+          repeating-linear-gradient(45deg, #0f5c4d 0 24px, #0d5446 24px 48px);
+      }
+      .tag {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.14);
+        padding: 4px 16px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+      }
+      .hero h1 {
+        font-size: clamp(2rem, 5.5vw, 3.5rem);
+        font-weight: 900;
+        line-height: 1.3;
+        max-width: 700px;
+      }
+      .hero h1 span {
+        color: var(--acc);
+      }
+      .hero p {
+        max-width: 560px;
+        margin: 16px 0 28px;
+        opacity: 0.92;
+        font-size: 1.1rem;
+      }
+      .hero .bt {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .stats {
+        margin-top: -56px;
+        position: relative;
+        z-index: 5;
+      }
+      .stats .wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+      .stat {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 22px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+        
+      }
+      .stat:hover{
+        
+        transform: translateY(-4px);
+        border-color: var(--pri);
+      }
+      .stat b {
+        display: block;
+        font-size: 2rem;
+        color: var(--pri);
+        font-weight: 900;
+      }
+      .stat small {
+        color: var(--muted);
+      }
+      section {
+        padding: 76px 0;
+      }
+      .alt {
+        background: var(--card);
+        border-block: 1px solid var(--line);
+      }
+      .sh {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .sh small {
+        color: var(--acc);
+        font-weight: 700;
+      }
+      .sh h2 {
+        font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+        font-weight: 900;
+      }
+      .sh p {
+        color: var(--muted);
+        max-width: 560px;
+        margin: 6px auto 0;
+      }
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+      .about .img {
+        border-radius: 22px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: #fff;
+      }
+      .about img {
+        width: 100%;
+        display: block;
+      }
+      .about ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 14px;
+        display: grid;
+        gap: 8px;
+      }
+      .about li:before {
+        content: "✓";
+        color: var(--acc);
+        font-weight: 900;
+        margin-inline-end: 10px;
+      }
+      .blocks {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+      }
+      .blk {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 18px;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .blk:hover {
+        transform: translateY(-4px);
+        border-color: var(--pri);
+      }
+      .blk h3 {
+        font-size: 1.5rem;
+        color: var(--pri);
+      }
+      .blk .n {
+        font-size: 1.4rem;
+        font-weight: 900;
+        color: var(--av);
+      }
+      .blk small {
+        color: var(--muted);
+        display: block;
+      }
+      .bar {
+        height: 6px;
+        border-radius: 6px;
+        background: var(--line);
+        margin-top: 8px;
+        overflow: hidden;
+      }
+      .bar i {
+        display: block;
+        height: 100%;
+        background: var(--av);
+      }
+      .tools {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+      .legend {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        font-size: 0.92rem;
+      }
+      .legend i {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        margin-inline-end: 6px;
+        vertical-align: -2px;
+      }
+      .chips {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .chip {
+        padding: 6px 16px;
+        border-radius: 50px;
+        border: 1px solid var(--line);
+        background: var(--card);
+        color: var(--text);
+        cursor: pointer;
+        font: inherit;
+        font-size: 0.9rem;
+      }
+      .chip.on {
+        background: var(--pri);
+        color: #fff;
+        border-color: var(--pri);
+      }
+      .map {
+        overflow: auto;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #fff;
+        padding: 10px;
+      }
+      .stage {
+        position: relative;
+        min-width: 900px;
+      }
+      .stage img,
+      .stage svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      
+      .stage svg {
+        position: absolute;
+        inset: 0;
+      }
+      .plot {
+        stroke: #fff;
+        stroke-width: 1;
+        fill-opacity: 0.4;
+        cursor: pointer;
+        transition: 0.15s;
+      }
+      .plot.available {
+        fill: var(--av);
+      }
+      .plot.reserved {
+        fill: var(--re);
+      }
+      .plot.sold {
+        fill: var(--so);
+        cursor: not-allowed;
+      }
+      .plot:hover {
+        fill-opacity: 0.85;
+        stroke: #000;
+        stroke-width: 2;
+      }
+      .plot.hide {
+        display: none;
+      }
+      .plot.dim {
+        fill-opacity: 0.05;
+      }
+      .dbs {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 4px 16px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        background: var(--re);
+        color: #1d1608;
+      }
+      .dbs.ok {
+        background: var(--av);
+        color: #fff;
+      }
+      .badge {
+        background: var(--re);
+        color: #1d1608;
+        border-radius: 50px;
+        padding: 2px 12px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        display: none;
+        margin-inline-start: 8px;
+      }
+      .feat,
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+      .f,
+      .step {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px 16px;
+        text-align: center;
+      }
+      .f .ic {
+        font-size: 2rem;
+      }
+      .f p,
+      .step p {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .step b {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--pri);
+        color: #fff;
+        margin: 0 auto 8px;
+      }
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .info {
+        display: grid;
+        gap: 12px;
+        align-content: start;
+      }
+      .info div {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 14px 18px;
+      }
+      .info b {
+        display: block;
+        color: var(--pri);
+      }
+      form,
+      .box {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 26px;
+        display: grid;
+        gap: 12px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        background: var(--bg);
+        color: var(--text);
+        font: inherit;
+      }
+      .res {
+        font-weight: 700;
+        color: var(--pri);
+      }
+      #tip {
+        position: fixed;
+        pointer-events: none;
+        background: #0a3f35;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        display: none;
+        z-index: 30;
+      }
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: none;
+        place-items: center;
+        z-index: 40;
+        padding: 16px;
+      }
+      .modal .box {
+        width: 100%;
+        max-width: 430px;
+      }
+      .box h2 {
+        color: var(--pri);
+      }
+      .box p {
+        color: var(--muted);
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+      }
+      .row .btn {
+        flex: 1;
+      }
+      .x {
+        background: var(--line);
+        color: var(--text);
+      }
+      footer {
+        background: #0a3f35;
+        color: #d7e6e2;
+        text-align: center;
+        padding: 28px 20px;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 900px) {
+        nav ul {
+          display: none;
+        }
+        .stats .wrap,
+        .feat,
+        .steps {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .blocks {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .about,
+        .contact {
+         grid-template-columns: 1fr;
+        }
+        section {
+          padding: 54px 0;
+        }
+        .hero {
+          padding: 70px 0 100px;
+        }
+      }
+
+      .plot,
+      .plot.available {
+        fill: var(--pri);
+        fill-opacity: 0.22;
+        cursor: pointer;
+      }
+      .plot:hover {
+        fill-opacity: 0.7;
+      }
+      .plot.sel {
+        fill: var(--acc);
+        fill-opacity: 0.8;
+        stroke: #000;
+        stroke-width: 2;
+      }
+      .stats .wrap {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 640px;
+      }
+      .wa {
+        background: #25d366;
+        color: #073b1b;
+        text-align: center;
+      }
+      .cta {
+        display: grid;
+        gap: 12px;
+        align-content: center;
+        text-align: center;
+      }
+      .cta p {
+        color: var(--muted);
+      }
+    
+      /* --- نافذة مواصفات النموذج --- */
+      .stat.model { cursor: pointer; }
+      #modelModal .box.wide { max-width: 1050px; }
+      #modelModal .box.wide .mimg { width: 100%; }
+      #modelModal .box { max-width: 800px; max-height: 90vh; overflow: auto; }
+      #modelModal .mimg { width: 730px; max-height: 300px; object-fit: fill; border-radius: 14px; border: 1px solid var(--line); background: #fff; display: block; }
+      #mmSpecs { display: grid; grid-template-columns: 1.4fr repeat(var(--imgs, 2), 1fr); gap: 16px; align-items: start; }
+      #mmSpecs .side-img { width: 100%; aspect-ratio: 3 / 4; object-fit:contain; border-radius: 14px; border: 1px solid var(--line); background: #fff; display: block; }
+      .spec-list { list-style: none; padding: 0; margin: 0; }
+      .spec-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 2px; border-bottom: 1px solid var(--line); }
+      .spec-list span { color: var(--muted); }
+      .spec-list b { color: var(--text); }
+      @media (max-width: 640px) {
+        #mmSpecs { grid-template-columns: 1fr 1fr; }
+        #mmSpecs .spec-list { grid-column: 1 / -1; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a href="#top" class="logo"
+          ><img class="xxx" src="images/ahrar.png" alt="" /> مجمع الأحرار
+          السكني</a
+        >
+        <nav>
+          <ul>
+            <li><a href="#about">عن المشروع</a></li>
+            <li><a href="#blocks">البلوكات</a></li>
+            <li><a href="#map">المخطط العام</a></li>
+            <li><a href="#features">المميزات</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+          </ul>
+        </nav>
+        <a href="#contact" class="btn b1" style="padding: 8px 20px"
+          >تواصل معنا</a
+        >
+      </div>
+    </header>
+
+    <main id="top">
+       
+      <div class="hero">
+       
+        <div class="wrap">
+        <span class="tag">📍 محافظة الناصرية – ذي قار</span>
+          <h1>احلم نجعل حلمك حقيقة <span>مجمع الأحرار السكني</span></h1>
+          <p>
+            تعرّف على المخطط العام للمجمع وتصفّح الدور والبلوكات، واستفسر عن
+            الدار التي تناسب عائلتك.
+          </p>
+          <div class="bt">
+            <a href="#map" class="btn b1">تصفّح المخطط العام</a
+            ><a href="#contact" class="btn b2">تواصل معنا</a>
+            </div>
+        </div>
+         
+      </div>
+
+      <div class="stats">
+        <div class="wrap">
+          <div class="stat"><b id="s-total">235</b><h3>دار سكنية</h3></div>
+          <div class="stat">
+            <b id="s-blocks">6</b><h3>نماذج سكنية</h3>
+          </div>
+        </div>
+      </div>
+<br><br>
+      <section id="about">
+        <div class="wrap about">
+          <div class="img">
+            <img src="images/Copilot_20260519_110047.png" alt="المخطط العام للمجمع" />
+          </div>
+          <div>
+            <div class="sh" style="text-align: start; margin-bottom: 0">
+              <h2>عن المشروع</h2>
+            </div>
+            <p style="color: var(--muted); margin-top: 10px">
+              يقع مجمع الأحرار السكني في محافظة الناصرية بتخطيط عمراني مدروس،
+              وتوزيع منظم للدور على بلوكات يتخللها شوارع ومساحات خضراء.
+            </p>
+            <ul>
+              <li>المستثمر: طريق انكيدو للتجارة العامةوالتطوير</li>
+              <li>الاستشاري:المكتب الهندسي الاستشاري -جامعة ذي قار</li>
+              <li>مدة المشروع : 24 شهر</li>
+              <li>تاريخ صدور الاجازة المعدلة: 7/9/ 2025</li>
+              <li>تصاميم معمارية حديثة وعملية</li>
+              <li>الجزء التجاري: روضة - حضانة - محلات تجارية-محطة غاز</li>
+              <li>شوارع وبنى تحتية مخططة بعناية</li>
+              <li>مساحات خضراء وحدائق للعائلة</li>
+              <li>أمن وحراسة على مدار الساعة</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <br><br>
+      <section id="blocks">
+        <div class="stats">  
+         <h1 style="text-align: center;">البلوكات</h1>  
+        <div class="wrap">
+          
+          <a href=""><div class="stat model" data-model="A1" title="اضغط لعرض المواصفات"><h3>نموذج</h3><b>A1</b><h4>المساحة 
+             <img src="images/a-1.png" alt="" style="width: 150px;height: 75px;border-radius: 10%;">الكلية 200م<sup>2</sup></h4>
+           <template>
+              <ul class="spec-list">
+               <li><span>المساحة </span><b>200 م²</b></li>
+               <li><span>المساحة الكلية للبناء</span><b>211.4 م²</b></li>
+                <li><span>غرف النوم</span><b>4</b></li>
+                 <li><span>حمام</span><b>3</b></li>
+                <li><span>صالة</span><b>2</b></li>
+                 <li><span>مناور</span><b>2</b></li>
+                <li><span>المطبخ</span><b>1</b></li>
+                <li><span>حديقة</span><b>1</b></li>
+                <li><span>الكراج</span><b>1</b></li>
+              </ul>
+              <img class="side-img" src="images/a1-s1.png" alt="النموذج A1 - صورة 1" style="height: 500px;"/>
+              <img class="side-img" src="images/a1-s2.png" alt="النموذج A1 - صورة 2" style="height: 500px;"/>
+            </template>
+          </div></a>
+          <a href="#"><div class="stat model" data-model="A2" title="اضغط لعرض المواصفات"><h3>نموذج</h3><b>A2</b><h4>المساحة 
+              <img src="images/a-2.png" alt="" style="width: 150px;height: 75px;border-radius: 10%;">الكلية 200م<sup>2</sup></h4>
+             <template>
+              <ul class="spec-list">
+               <li><span>المساحة </span><b>200 م²</b></li>
+               <li><span>المساحة الكلية للبناء</span><b>231.8 م²</b></li>
+                <li><span>غرف النوم</span><b>4</b></li>
+                <li><span>حمام</span><b>3</b></li>
+                <li><span>صالة</span><b>2</b></li>
+                 <li><span>مناور</span><b>2</b></li>
+                <li><span>المطبخ</span><b>1</b></li>
+                <li><span>حديقة</span><b>1</b></li>
+                <li><span>الكراج</span><b>1</b></li>
+              </ul>
+              <img class="side-img" src="images/a2-s1.png" alt="النموذج A2 - صورة 1" style="height: 500px;"/>
+              <img class="side-img" src="images/a2-s2.png" alt="النموذج A2 - صورة 2" style="height: 500px;"/>
+            </template>
+          </div></a>
+          <a href="#"><div class="stat model" data-model="A3" title="اضغط لعرض المواصفات"><h3>نموذج</h3><b>A3</b><h4>المساحة 
+              <img src="images/a-3.png" alt="" style="width: 150px;height: 75px;border-radius: 10%;">الكلية 200م<sup>2</sup></h4>
+             <template>
+              <ul class="spec-list">
+               <li><span>المساحة </span><b>200 م²</b></li>
+               <li><span>المساحة الكلية للبناء</span><b>248.3 م²</b></li>
+                <li><span>غرف النوم</span><b>4</b></li>
+                <li><span>صالة</span><b>2</b></li>
+                 <li><span>مناور</span><b>2</b></li>
+                <li><span>المطبخ</span><b>1</b></li>
+                <li><span>حديقة</span><b>1</b></li>
+                <li><span>الكراج</span><b>1</b></li>
+              </ul>
+              <img class="side-img" src="images/a3-s1.png" alt="النموذج A3 - صورة 1" style="height: 500px;"/>
+              <img class="side-img" src="images/a3-s2.png" alt="النموذج A3 - صورة 2" style="height: 500px;"/>
+            </template>
+          </div></a>         
+          <a href="#"><div class="stat model" data-model="A4" title="اضغط لعرض المواصفات"><h3>نموذج</h3><b>A4</b><h4>المساحة 
+              <img src="images/a-4.png" alt="" style="width: 150px;height: 75px;border-radius: 10%;">الكلية 150م<sup>2</sup></h4>
+             <template>
+              <ul class="spec-list">
+              <li><span>المساحة </span><b>150 م²</b></li>
+               <li><span>المساحة الكلية للبناء</span><b>211.4 م²</b></li>
+                <li><span>غرف النوم</span><b>4</b></li>
+                <li><span>صالة</span><b>2</b></li>
+                 <li><span>مناور</span><b>2</b></li>
+                <li><span>المطبخ</span><b>1</b></li>
+                <li><span>حديقة</span><b>1</b></li>
+                <li><span>الكراج</span><b>1</b></li>
+              </ul>
+              <img class="side-img" src="images/a4-s1.png" alt="النموذج A4 - صورة 1" style="height: 500px;"/>
+              <img class="side-img" src="images/a4-s2.png" alt="النموذج A4 - صورة 2" style="height: 500px;"/>
+            </template>
+          </div></a>
+          <a href="#"><div class="stat model" data-model="A5" title="اضغط لعرض المواصفات"><h3>نموذج</h3><b>A5</b><h4>المساحة 
+              <img src="images/a-5.png" alt="" style="width: 150px;height: 75px;border-radius: 10%;">الكلية 200م<sup>2</sup></h4>
+            <template>
+              <ul class="spec-list">
+               <li><span>المساحة </span><b>200 م²</b></li>
+               <li><span>المساحة الكلية للبناء</span><b>315 م²</b></li>
+                <li><span>غرف النوم</span><b>4</b></li>
+                <li><span>صالة</span><b>2</b></li>
+                 <li><span>مناور</span><b>2</b></li>
+                <li><span>المطبخ</span><b>1</b></li>
+                <li><span>حديقة</span><b>3</b></li>
+                <li><span>الكراج</span><b>1</b></li>
+                <li><span>حمام</span><b>7</b></li>
+                <li><span>مخزن</span><b>1</b></li>
+              <li><span>غرفة مطوى</span><b>1</b></li>
+              <li><span>سطح</span><b>1</b></li>
+              </ul>
+              <img class="side-img" src="images/a5-s1.png" alt="النموذج A5 - صورة 1" style="height: 600px;"/>
+              <img class="side-img" src="images/a5-s2.png" alt="النموذج A5 - صورة 2" style="height: 600px;"/>
+              <img class="side-img" src="images/a5-s3.png" alt="النموذج A5 - صورة 3" style="height: 600px;" />
+            </template>
+          </div></a>              
+          <a href="#"><div class="stat model" data-model="A6" title="اضغط لعرض المواصفات"><h3>نموذج</h3><b>A6</b><h4>المساحة 
+              <img src="images/a-5.png" alt="" style="width: 150px;height: 75px;border-radius: 10%;">الكلية 215م<sup>2</sup></h4>
+            <template>
+              <ul class="spec-list">
+               <li><span>المساحة </span><b>215 م²</b></li>
+               <li><span>المساحة الكلية للبناء</span><b>315 م²</b></li>
+                <li><span>غرف النوم</span><b>4</b></li>
+                <li><span>صالة</span><b>2</b></li>
+                 <li><span>مناور</span><b>2</b></li>
+                <li><span>المطبخ</span><b>1</b></li>
+                <li><span>حديقة</span><b>3</b></li>
+                <li><span>الكراج</span><b>1</b></li>
+                <li><span>حمام</span><b>7</b></li>
+                <li><span>مخزن</span><b>1</b></li>
+              <li><span>غرفة مطوى</span><b>1</b></li>
+              <li><span>سطح</span><b>1</b></li>
+              </ul>
+              <img class="side-img" src="images/a6-s1.png" alt="النموذج A5 - صورة 1" style="height: 600px;"/>
+              <img class="side-img" src="images/a6-s2.png" alt="النموذج A5 - صورة 2" style="height: 600px;"/>
+              <img class="side-img" src="images/a6-s3.png" alt="النموذج A5 - صورة 3" style="height: 600px;" />
+            </template>
+          </div></a>
+          </div>
+        </div>
+      </div>
+      
+      </section>
+
+
+
+         <section id="features" class="alt">
+        <div class="wrap">
+          <div class="sh">
+           
+            <h1>مميزات المجمع</h1>
+          </div>
+          <div class="feat">
+            <div class="f">
+              <div class="ic">🛡️</div>
+              <h3>أمان وخصوصية</h3>
+              <p>مدخل منظم وحراسة دائمة.</p>
+            </div>
+            <div class="f">
+              <div class="ic">🌳</div>
+              <h3>مساحات خضراء</h3>
+              <p>حدائق ومتنزهات للعائلة.</p>
+            </div>
+            <div class="f">
+              <div class="ic">⚡</div>
+              <h3>بنى تحتية حديثة</h3>
+              <p>ماء وكهرباء وطرق مخططة.</p>
+            </div>
+            <div class="f">
+              <div class="ic">🕌</div>
+              <h3>خدمات قريبة</h3>
+              <p>مدارس وأسواق ومرافق عامة ومحطة غاز.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="background-color:#0a3f35;
+;">
+        <div class="wrap">
+          <div class="sh">
+            <small>تواصل معنا</small>
+            <h2 style="color: #c8963e;">نسعد بخدمتك</h2>
+          </div>
+          <div class="contact">
+            <div class="info">
+              <div><b>📍 الموقع</b>مجمع الأحرار السكني – الناصرية، ذي قار</div>
+              <div>
+                <b>📞 الهاتف</b><span dir="ltr">+964 7XX XXX XXXX</span>
+              </div>
+              <div><b>✉️ البريد</b><span dir="ltr">info@example.com</span></div>
+              <div><b>🕘 ساعات العمل</b>السبت – الخميس: 9 ص – 5 م</div>
+            </div>
+            <div class="box cta">
+              <h2>للاستفسار والتواصل</h2>
+              <p>راسلنا مباشرة على واتساب وسيرد عليك فريقنا بأقرب وقت.</p>
+              <a class="btn wa" id="wa0" target="_blank" rel="noopener"
+                >تواصل عبر واتساب</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>© 2026 مجمع الأحرار السكني – الناصرية. جميع الحقوق محفوظة.</footer>
+
+    <div id="tip"></div>
+    <div class="modal" id="modal">
+      <div class="box">
+        <h2 id="mt"></h2>
+        <p id="mi"></p>
+        <div class="row">
+          <a class="btn wa" id="wa" target="_blank" rel="noopener"
+            >استفسر عن هذه الدار</a
+          ><button class="btn x" id="cl">إغلاق</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modelModal">
+      <div class="box">
+        <h2 id="mmTitle"></h2>
+        <img class="mimg" id="mmImg" alt="" />
+        <div id="mmSpecs"></div>
+        <div class="row">
+          <button class="btn x" id="mmClose">إغلاق</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      
+      const WHATSAPP = "9647XXXXXXXXX"; // رقم واتساب بصيغة دولية بدون + أو أصفار
+      const PLOTS = [
+        {
+          id: "A-01",
+          area: 0,
+          price: 0,
+          points: "503,213 520,208 529,253 512,258",
+        },
+        {
+          id: "A-02",
+          area: 0,
+          price: 0,
+          points: "520,208 537,203 545,248 529,253",
+        },
+        {
+          id: "A-03",
+          area: 0,
+          price: 0,
+          points: "537,203 554,198 562,243 545,248",
+        },
+        {
+          id: "A-04",
+          area: 0,
+          price: 0,
+          points: "554,198 571,193 578,239 562,243",
+        },
+        {
+          id: "A-05",
+          area: 0,
+          price: 0,
+          points: "571,193 588,188 595,234 578,239",
+        },
+        {
+          id: "A-06",
+          area: 0,
+          price: 0,
+          points: "588,188 605,183 612,229 595,234",
+        },
+        {
+          id: "A-07",
+          area: 0,
+          price: 0,
+          points: "605,183 622,178 628,224 612,229",
+        },
+        {
+          id: "A-08",
+          area: 0,
+          price: 0,
+          points: "622,178 639,173 645,219 628,224",
+        },
+        {
+          id: "A-09",
+          area: 0,
+          price: 0,
+          points: "639,173 656,167 661,214 645,219",
+        },
+        {
+          id: "A-10",
+          area: 0,
+          price: 0,
+          points: "656,167 673,162 678,210 661,214",
+        },
+        {
+          id: "A-11",
+          area: 0,
+          price: 0,
+          points: "673,162 690,157 695,205 678,210",
+        },
+        {
+          id: "A-12",
+          area: 0,
+          price: 0,
+          points: "690,157 707,152 711,200 695,205",
+        },
+        {
+          id: "A-13",
+          area: 0,
+          price: 0,
+          points: "707,152 724,147 728,195 711,200",
+        },
+        {
+          id: "A-14",
+          area: 0,
+          price: 0,
+          points: "724,147 741,142 744,190 728,195",
+        },
+        {
+          id: "A-15",
+          area: 0,
+          price: 0,
+          points: "741,142 758,137 761,185 744,190",
+        },
+        {
+          id: "A-16",
+          area: 0,
+          price: 0,
+          points: "758,137 775,132 778,180 761,185",
+        },
+        {
+          id: "A-17",
+          area: 0,
+          price: 0,
+          points: "775,132 791,127 794,176 778,180",
+        },
+        {
+          id: "A-18",
+          area: 0,
+          price: 0,
+          points: "791,127 808,122 811,171 794,176",
+        },
+        {
+          id: "A-19",
+          area: 0,
+          price: 0,
+          points: "808,122 825,117 828,166 811,171",
+        },
+        {
+          id: "A-20",
+          area: 0,
+          price: 0,
+          points: "825,117 842,112 844,161 828,166",
+        },
+        {
+          id: "A-21",
+          area: 0,
+          price: 0,
+          points: "842,112 859,107 861,156 844,161",
+        },
+        {
+          id: "A-22",
+          area: 0,
+          price: 0,
+          points: "859,107 876,102 877,151 861,156",
+        },
+        {
+          id: "A-23",
+          area: 0,
+          price: 0,
+          points: "876,102 893,97 894,146 877,151",
+        },
+        {
+          id: "A-24",
+          area: 0,
+          price: 0,
+          points: "893,97 910,92 911,142 894,146",
+        },
+        {
+          id: "A-25",
+          area: 0,
+          price: 0,
+          points: "910,92 927,86 927,137 911,142",
+        },
+        {
+          id: "A-26",
+          area: 0,
+          price: 0,
+          points: "927,86 944,81 944,132 927,137",
+        },
+        {
+          id: "A-27",
+          area: 0,
+          price: 0,
+          points: "944,81 961,76 960,127 944,132",
+        },
+        {
+          id: "A-28",
+          area: 0,
+          price: 0,
+          points: "961,76 978,71 977,122 960,127",
+        },
+        {
+          id: "A-29",
+          area: 0,
+          price: 0,
+          points: "978,71 995,66 994,117 977,122",
+        },
+        {
+          id: "A-30",
+          area: 0,
+          price: 0,
+          points: "995,66 1012,61 1010,113 994,117",
+        },
+        {
+          id: "A-31",
+          area: 0,
+          price: 0,
+          points: "1012,61 1029,56 1027,108 1010,113",
+        },
+        {
+          id: "A-32",
+          area: 0,
+          price: 0,
+          points: "1029,56 1046,51 1043,103 1027,108",
+        },
+        {
+          id: "A-33",
+          area: 0,
+          price: 0,
+          points: "1046,51 1063,46 1060,98 1043,103",
+        },
+        {
+          id: "B-01",
+          area: 0,
+          price: 0,
+          points: "1018,125 1062,118 1063,137 1019,144",
+        },
+        {
+          id: "B-02",
+          area: 0,
+          price: 0,
+          points: "1019,144 1063,137 1065,157 1019,163",
+        },
+        {
+          id: "B-03",
+          area: 0,
+          price: 0,
+          points: "1019,163 1065,157 1066,176 1020,182",
+        },
+        {
+          id: "B-04",
+          area: 0,
+          price: 0,
+          points: "1020,182 1066,176 1067,196 1020,201",
+        },
+        {
+          id: "B-05",
+          area: 0,
+          price: 0,
+          points: "1020,201 1067,196 1069,215 1021,221",
+        },
+        {
+          id: "B-06",
+          area: 0,
+          price: 0,
+          points: "1021,221 1069,215 1070,234 1022,240",
+        },
+        {
+          id: "B-07",
+          area: 0,
+          price: 0,
+          points: "1022,240 1070,234 1071,254 1022,259",
+        },
+        {
+          id: "B-08",
+          area: 0,
+          price: 0,
+          points: "1022,259 1071,254 1072,273 1023,278",
+        },
+        {
+          id: "B-09",
+          area: 0,
+          price: 0,
+          points: "1023,278 1072,273 1074,292 1024,297",
+        },
+        {
+          id: "B-10",
+          area: 0,
+          price: 0,
+          points: "1024,297 1074,292 1075,312 1024,316",
+        },
+        {
+          id: "B-11",
+          area: 0,
+          price: 0,
+          points: "1024,316 1075,312 1076,331 1025,335",
+        },
+        {
+          id: "B-12",
+          area: 0,
+          price: 0,
+          points: "1025,335 1076,331 1078,351 1025,354",
+        },
+        {
+          id: "B-13",
+          area: 0,
+          price: 0,
+          points: "1025,354 1078,351 1079,370 1026,374",
+        },
+        {
+          id: "B-14",
+          area: 0,
+          price: 0,
+          points: "1026,374 1079,370 1080,389 1027,393",
+        },
+        {
+          id: "B-15",
+          area: 0,
+          price: 0,
+          points: "1027,393 1080,389 1082,409 1027,412",
+        },
+        {
+          id: "B-16",
+          area: 0,
+          price: 0,
+          points: "1027,412 1082,409 1083,428 1028,431",
+        },
+        {
+          id: "B-17",
+          area: 0,
+          price: 0,
+          points: "1028,431 1083,428 1084,448 1028,450",
+        },
+        {
+          id: "B-18",
+          area: 0,
+          price: 0,
+          points: "1028,450 1084,448 1086,467 1029,469",
+        },
+        {
+          id: "B-19",
+          area: 0,
+          price: 0,
+          points: "1029,469 1086,467 1087,486 1030,488",
+        },
+        {
+          id: "B-20",
+          area: 0,
+          price: 0,
+          points: "1030,488 1087,486 1088,506 1030,507",
+        },
+        {
+          id: "B-21",
+          area: 0,
+          price: 0,
+          points: "1030,507 1088,506 1089,525 1031,526",
+        },
+        {
+          id: "B-22",
+          area: 0,
+          price: 0,
+          points: "1031,526 1089,525 1091,544 1032,546",
+        },
+        {
+          id: "B-23",
+          area: 0,
+          price: 0,
+          points: "1032,546 1091,544 1092,564 1032,565",
+        },
+        {
+          id: "B-24",
+          area: 0,
+          price: 0,
+          points: "1032,565 1092,564 1093,583 1033,584",
+        },
+        {
+          id: "B-25",
+          area: 0,
+          price: 0,
+          points: "1033,584 1093,583 1095,603 1033,603",
+        },
+        {
+          id: "B-26",
+          area: 0,
+          price: 0,
+          points: "1033,603 1095,603 1096,622 1034,622",
+        },
+        {
+          id: "C-01",
+          area: 0,
+          price: 0,
+          points: "768,204 792,204 792,248 768,248",
+        },
+        {
+          id: "C-02",
+          area: 0,
+          price: 0,
+          points: "792,204 817,204 817,248 792,248",
+        },
+        {
+          id: "C-03",
+          area: 0,
+          price: 0,
+          points: "817,204 841,204 841,248 817,248",
+        },
+        {
+          id: "C-04",
+          area: 0,
+          price: 0,
+          points: "841,204 866,204 866,248 841,248",
+        },
+        {
+          id: "C-05",
+          area: 0,
+          price: 0,
+          points: "866,204 890,204 890,248 866,248",
+        },
+        {
+          id: "C-06",
+          area: 0,
+          price: 0,
+          points: "890,204 914,204 914,248 890,248",
+        },
+        {
+          id: "C-07",
+          area: 0,
+          price: 0,
+          points: "914,204 939,204 939,248 914,248",
+        },
+        {
+          id: "C-08",
+          area: 0,
+          price: 0,
+          points: "939,204 963,204 963,248 939,248",
+        },
+        {
+          id: "C-09",
+          area: 0,
+          price: 0,
+          points: "963,204 988,204 988,248 963,248",
+        },
+        {
+          id: "C-10",
+          area: 0,
+          price: 0,
+          points: "988,204 1012,204 1012,248 988,248",
+        },
+        {
+          id: "C-11",
+          area: 0,
+          price: 0,
+          points: "768,248 792,248 792,293 768,293",
+        },
+        {
+          id: "C-12",
+          area: 0,
+          price: 0,
+          points: "792,248 817,248 817,293 792,293",
+        },
+        {
+          id: "C-13",
+          area: 0,
+          price: 0,
+          points: "817,248 841,248 841,293 817,293",
+        },
+        {
+          id: "C-14",
+          area: 0,
+          price: 0,
+          points: "841,248 866,248 866,293 841,293",
+        },
+        {
+          id: "C-15",
+          area: 0,
+          price: 0,
+          points: "866,248 890,248 890,293 866,293",
+        },
+        {
+          id: "C-16",
+          area: 0,
+          price: 0,
+          points: "890,248 914,248 914,293 890,293",
+        },
+        {
+          id: "C-17",
+          area: 0,
+          price: 0,
+          points: "914,248 939,248 939,293 914,293",
+        },
+        {
+          id: "C-18",
+          area: 0,
+          price: 0,
+          points: "939,248 963,248 963,293 939,293",
+        },
+        {
+          id: "C-19",
+          area: 0,
+          price: 0,
+          points: "963,248 988,248 988,293 963,293",
+        },
+        {
+          id: "C-20",
+          area: 0,
+          price: 0,
+          points: "988,248 1012,248 1012,293 988,293",
+        },
+        {
+          id: "D-01",
+          area: 0,
+          price: 0,
+          points: "773,315 798,315 798,354 773,354",
+        },
+        {
+          id: "D-02",
+          area: 0,
+          price: 0,
+          points: "798,315 822,315 822,354 798,354",
+        },
+        {
+          id: "D-03",
+          area: 0,
+          price: 0,
+          points: "822,315 847,315 847,354 822,354",
+        },
+        {
+          id: "D-04",
+          area: 0,
+          price: 0,
+          points: "847,315 872,315 872,354 847,354",
+        },
+        {
+          id: "D-05",
+          area: 0,
+          price: 0,
+          points: "872,315 896,315 896,354 872,354",
+        },
+        {
+          id: "D-06",
+          area: 0,
+          price: 0,
+          points: "896,315 921,315 921,354 896,354",
+        },
+        {
+          id: "D-07",
+          area: 0,
+          price: 0,
+          points: "921,315 946,315 946,354 921,354",
+        },
+        {
+          id: "D-08",
+          area: 0,
+          price: 0,
+          points: "946,315 971,315 971,354 946,354",
+        },
+        {
+          id: "D-09",
+          area: 0,
+          price: 0,
+          points: "971,315 995,315 995,354 971,354",
+        },
+        {
+          id: "D-10",
+          area: 0,
+          price: 0,
+          points: "995,315 1020,315 1020,354 995,354",
+        },
+        {
+          id: "D-11",
+          area: 0,
+          price: 0,
+          points: "773,354 798,354 798,392 773,392",
+        },
+        {
+          id: "D-12",
+          area: 0,
+          price: 0,
+          points: "798,354 822,354 822,392 798,392",
+        },
+        {
+          id: "D-13",
+          area: 0,
+          price: 0,
+          points: "822,354 847,354 847,392 822,392",
+        },
+        {
+          id: "D-14",
+          area: 0,
+          price: 0,
+          points: "847,354 872,354 872,392 847,392",
+        },
+        {
+          id: "D-15",
+          area: 0,
+          price: 0,
+          points: "872,354 896,354 896,392 872,392",
+        },
+        {
+          id: "D-16",
+          area: 0,
+          price: 0,
+          points: "896,354 921,354 921,392 896,392",
+        },
+        {
+          id: "D-17",
+          area: 0,
+          price: 0,
+          points: "921,354 946,354 946,392 921,392",
+        },
+        {
+          id: "D-18",
+          area: 0,
+          price: 0,
+          points: "946,354 971,354 971,392 946,392",
+        },
+        {
+          id: "D-19",
+          area: 0,
+          price: 0,
+          points: "971,354 995,354 995,392 971,392",
+        },
+        {
+          id: "D-20",
+          area: 0,
+          price: 0,
+          points: "995,354 1020,354 1020,392 995,392",
+        },
+        {
+          id: "E-01",
+          area: 0,
+          price: 0,
+          points: "770,413 795,413 795,455 770,455",
+        },
+        {
+          id: "E-02",
+          area: 0,
+          price: 0,
+          points: "795,413 821,413 821,455 795,455",
+        },
+        {
+          id: "E-03",
+          area: 0,
+          price: 0,
+          points: "821,413 846,413 846,455 821,455",
+        },
+        {
+          id: "E-04",
+          area: 0,
+          price: 0,
+          points: "846,413 872,413 872,455 846,455",
+        },
+        {
+          id: "E-05",
+          area: 0,
+          price: 0,
+          points: "872,413 897,413 897,455 872,455",
+        },
+        {
+          id: "E-06",
+          area: 0,
+          price: 0,
+          points: "897,413 922,413 922,455 897,455",
+        },
+        {
+          id: "E-07",
+          area: 0,
+          price: 0,
+          points: "922,413 948,413 948,455 922,455",
+        },
+        {
+          id: "E-08",
+          area: 0,
+          price: 0,
+          points: "948,413 973,413 973,455 948,455",
+        },
+        {
+          id: "E-09",
+          area: 0,
+          price: 0,
+          points: "973,413 999,413 999,455 973,455",
+        },
+        {
+          id: "E-10",
+          area: 0,
+          price: 0,
+          points: "999,413 1024,413 1024,455 999,455",
+        },
+        {
+          id: "E-11",
+          area: 0,
+          price: 0,
+          points: "770,455 795,455 795,497 770,497",
+        },
+        {
+          id: "E-12",
+          area: 0,
+          price: 0,
+          points: "795,455 821,455 821,497 795,497",
+        },
+        {
+          id: "E-13",
+          area: 0,
+          price: 0,
+          points: "821,455 846,455 846,497 821,497",
+        },
+        {
+          id: "E-14",
+          area: 0,
+          price: 0,
+          points: "846,455 872,455 872,497 846,497",
+        },
+        {
+          id: "E-15",
+          area: 0,
+          price: 0,
+          points: "872,455 897,455 897,497 872,497",
+        },
+        {
+          id: "E-16",
+          area: 0,
+          price: 0,
+          points: "897,455 922,455 922,497 897,497",
+        },
+        {
+          id: "E-17",
+          area: 0,
+          price: 0,
+          points: "922,455 948,455 948,497 922,497",
+        },
+        {
+          id: "E-18",
+          area: 0,
+          price: 0,
+          points: "948,455 973,455 973,497 948,497",
+        },
+        {
+          id: "E-19",
+          area: 0,
+          price: 0,
+          points: "973,455 999,455 999,497 973,497",
+        },
+        {
+          id: "E-20",
+          area: 0,
+          price: 0,
+          points: "999,455 1024,455 1024,497 999,497",
+        },
+        {
+          id: "F-01",
+          area: 0,
+          price: 0,
+          points: "738,518 762,518 762,564 738,564",
+        },
+        {
+          id: "F-02",
+          area: 0,
+          price: 0,
+          points: "762,518 787,518 787,564 762,564",
+        },
+        {
+          id: "F-03",
+          area: 0,
+          price: 0,
+          points: "787,518 811,518 811,564 787,564",
+        },
+        {
+          id: "F-04",
+          area: 0,
+          price: 0,
+          points: "811,518 835,518 835,564 811,564",
+        },
+        {
+          id: "F-05",
+          area: 0,
+          price: 0,
+          points: "835,518 860,518 860,564 835,564",
+        },
+        {
+          id: "F-06",
+          area: 0,
+          price: 0,
+          points: "860,518 884,518 884,564 860,564",
+        },
+        {
+          id: "F-07",
+          area: 0,
+          price: 0,
+          points: "884,518 908,518 908,564 884,564",
+        },
+        {
+          id: "F-08",
+          area: 0,
+          price: 0,
+          points: "908,518 933,518 933,564 908,564",
+        },
+        {
+          id: "F-09",
+          area: 0,
+          price: 0,
+          points: "933,518 957,518 957,564 933,564",
+        },
+        {
+          id: "F-10",
+          area: 0,
+          price: 0,
+          points: "957,518 981,518 981,564 957,564",
+        },
+        {
+          id: "F-11",
+          area: 0,
+          price: 0,
+          points: "981,518 1006,518 1006,564 981,564",
+        },
+        {
+          id: "F-12",
+          area: 0,
+          price: 0,
+          points: "1006,518 1030,518 1030,564 1006,564",
+        },
+        {
+          id: "F-13",
+          area: 0,
+          price: 0,
+          points: "738,564 762,564 762,610 738,610",
+        },
+        {
+          id: "F-14",
+          area: 0,
+          price: 0,
+          points: "762,564 787,564 787,610 762,610",
+        },
+        {
+          id: "F-15",
+          area: 0,
+          price: 0,
+          points: "787,564 811,564 811,610 787,610",
+        },
+        {
+          id: "F-16",
+          area: 0,
+          price: 0,
+          points: "811,564 835,564 835,610 811,610",
+        },
+        {
+          id: "F-17",
+          area: 0,
+          price: 0,
+          points: "835,564 860,564 860,610 835,610",
+        },
+        {
+          id: "F-18",
+          area: 0,
+          price: 0,
+          points: "860,564 884,564 884,610 860,610",
+        },
+        {
+          id: "F-19",
+          area: 0,
+          price: 0,
+          points: "884,564 908,564 908,610 884,610",
+        },
+        {
+          id: "F-20",
+          area: 0,
+          price: 0,
+          points: "908,564 933,564 933,610 908,610",
+        },
+        {
+          id: "F-21",
+          area: 0,
+          price: 0,
+          points: "933,564 957,564 957,610 933,610",
+        },
+        {
+          id: "F-22",
+          area: 0,
+          price: 0,
+          points: "957,564 981,564 981,610 957,610",
+        },
+        {
+          id: "F-23",
+          area: 0,
+          price: 0,
+          points: "981,564 1006,564 1006,610 981,610",
+        },
+        {
+          id: "F-24",
+          area: 0,
+          price: 0,
+          points: "1006,564 1030,564 1030,610 1006,610",
+        },
+        {
+          id: "G-01",
+          area: 0,
+          price: 0,
+          points: "636,288 688,288 688,314 636,314",
+        },
+        {
+          id: "G-02",
+          area: 0,
+          price: 0,
+          points: "688,288 740,288 740,314 688,314",
+        },
+        {
+          id: "G-03",
+          area: 0,
+          price: 0,
+          points: "636,314 688,314 688,339 636,339",
+        },
+        {
+          id: "G-04",
+          area: 0,
+          price: 0,
+          points: "688,314 740,314 740,339 688,339",
+        },
+        {
+          id: "G-05",
+          area: 0,
+          price: 0,
+          points: "636,339 688,339 688,364 636,364",
+        },
+        {
+          id: "G-06",
+          area: 0,
+          price: 0,
+          points: "688,339 740,339 740,364 688,364",
+        },
+        {
+          id: "G-07",
+          area: 0,
+          price: 0,
+          points: "636,364 688,364 688,390 636,390",
+        },
+        {
+          id: "G-08",
+          area: 0,
+          price: 0,
+          points: "688,364 740,364 740,390 688,390",
+        },
+        {
+          id: "G-09",
+          area: 0,
+          price: 0,
+          points: "636,390 688,390 688,416 636,416",
+        },
+        {
+          id: "G-10",
+          area: 0,
+          price: 0,
+          points: "688,390 740,390 740,416 688,416",
+        },
+        {
+          id: "G-11",
+          area: 0,
+          price: 0,
+          points: "636,416 688,416 688,441 636,441",
+        },
+        {
+          id: "G-12",
+          area: 0,
+          price: 0,
+          points: "688,416 740,416 740,441 688,441",
+        },
+        {
+          id: "G-13",
+          area: 0,
+          price: 0,
+          points: "636,441 688,441 688,466 636,466",
+        },
+        {
+          id: "G-14",
+          area: 0,
+          price: 0,
+          points: "688,441 740,441 740,466 688,466",
+        },
+        {
+          id: "G-15",
+          area: 0,
+          price: 0,
+          points: "636,466 688,466 688,492 636,492",
+        },
+        {
+          id: "G-16",
+          area: 0,
+          price: 0,
+          points: "688,466 740,466 740,492 688,492",
+        },
+        {
+          id: "H-01",
+          area: 0,
+          price: 0,
+          points: "362,289 386,289 386,336 362,336",
+        },
+        {
+          id: "H-02",
+          area: 0,
+          price: 0,
+          points: "386,289 411,289 411,336 386,336",
+        },
+        {
+          id: "H-03",
+          area: 0,
+          price: 0,
+          points: "411,289 435,289 435,336 411,336",
+        },
+        {
+          id: "H-04",
+          area: 0,
+          price: 0,
+          points: "435,289 460,289 460,336 435,336",
+        },
+        {
+          id: "H-05",
+          area: 0,
+          price: 0,
+          points: "460,289 484,289 484,336 460,336",
+        },
+        {
+          id: "H-06",
+          area: 0,
+          price: 0,
+          points: "484,289 508,289 508,336 484,336",
+        },
+        {
+          id: "H-07",
+          area: 0,
+          price: 0,
+          points: "508,289 533,289 533,336 508,336",
+        },
+        {
+          id: "H-08",
+          area: 0,
+          price: 0,
+          points: "533,289 557,289 557,336 533,336",
+        },
+        {
+          id: "H-09",
+          area: 0,
+          price: 0,
+          points: "557,289 582,289 582,336 557,336",
+        },
+        {
+          id: "H-10",
+          area: 0,
+          price: 0,
+          points: "582,289 606,289 606,336 582,336",
+        },
+        {
+          id: "H-11",
+          area: 0,
+          price: 0,
+          points: "362,336 386,336 386,382 362,382",
+        },
+        {
+          id: "H-12",
+          area: 0,
+          price: 0,
+          points: "386,336 411,336 411,382 386,382",
+        },
+        {
+          id: "H-13",
+          area: 0,
+          price: 0,
+          points: "411,336 435,336 435,382 411,382",
+        },
+        {
+          id: "H-14",
+          area: 0,
+          price: 0,
+          points: "435,336 460,336 460,382 435,382",
+        },
+        {
+          id: "H-15",
+          area: 0,
+          price: 0,
+          points: "460,336 484,336 484,382 460,382",
+        },
+        {
+          id: "H-16",
+          area: 0,
+          price: 0,
+          points: "484,336 508,336 508,382 484,382",
+        },
+        {
+          id: "H-17",
+          area: 0,
+          price: 0,
+          points: "508,336 533,336 533,382 508,382",
+        },
+        {
+          id: "H-18",
+          area: 0,
+          price: 0,
+          points: "533,336 557,336 557,382 533,382",
+        },
+        {
+          id: "H-19",
+          area: 0,
+          price: 0,
+          points: "557,336 582,336 582,382 557,382",
+        },
+        {
+          id: "H-20",
+          area: 0,
+          price: 0,
+          points: "582,336 606,336 606,382 582,382",
+        },
+        {
+          id: "I-01",
+          area: 0,
+          price: 0,
+          points: "262,402 287,402 287,449 262,449",
+        },
+        {
+          id: "I-02",
+          area: 0,
+          price: 0,
+          points: "287,402 311,402 311,449 287,449",
+        },
+        {
+          id: "I-03",
+          area: 0,
+          price: 0,
+          points: "311,402 336,402 336,449 311,449",
+        },
+        {
+          id: "I-04",
+          area: 0,
+          price: 0,
+          points: "336,402 360,402 360,449 336,449",
+        },
+        {
+          id: "I-05",
+          area: 0,
+          price: 0,
+          points: "360,402 385,402 385,449 360,449",
+        },
+        {
+          id: "I-06",
+          area: 0,
+          price: 0,
+          points: "385,402 409,402 409,449 385,449",
+        },
+        {
+          id: "I-07",
+          area: 0,
+          price: 0,
+          points: "409,402 434,402 434,449 409,449",
+        },
+        {
+          id: "I-08",
+          area: 0,
+          price: 0,
+          points: "434,402 459,402 459,449 434,449",
+        },
+        {
+          id: "I-09",
+          area: 0,
+          price: 0,
+          points: "459,402 483,402 483,449 459,449",
+        },
+        {
+          id: "I-10",
+          area: 0,
+          price: 0,
+          points: "483,402 508,402 508,449 483,449",
+        },
+        {
+          id: "I-11",
+          area: 0,
+          price: 0,
+          points: "508,402 532,402 532,449 508,449",
+        },
+        {
+          id: "I-12",
+          area: 0,
+          price: 0,
+          points: "532,402 557,402 557,449 532,449",
+        },
+        {
+          id: "I-13",
+          area: 0,
+          price: 0,
+          points: "557,402 581,402 581,449 557,449",
+        },
+        {
+          id: "I-14",
+          area: 0,
+          price: 0,
+          points: "581,402 606,402 606,449 581,449",
+        },
+        {
+          id: "I-15",
+          area: 0,
+          price: 0,
+          points: "262,449 287,449 287,496 262,496",
+        },
+        {
+          id: "I-16",
+          area: 0,
+          price: 0,
+          points: "287,449 311,449 311,496 287,496",
+        },
+        {
+          id: "I-17",
+          area: 0,
+          price: 0,
+          points: "311,449 336,449 336,496 311,496",
+        },
+        {
+          id: "I-18",
+          area: 0,
+          price: 0,
+          points: "336,449 360,449 360,496 336,496",
+        },
+        {
+          id: "I-19",
+          area: 0,
+          price: 0,
+          points: "360,449 385,449 385,496 360,496",
+        },
+        {
+          id: "I-20",
+          area: 0,
+          price: 0,
+          points: "385,449 409,449 409,496 385,496",
+        },
+        {
+          id: "I-21",
+          area: 0,
+          price: 0,
+          points: "409,449 434,449 434,496 409,496",
+        },
+        {
+          id: "I-22",
+          area: 0,
+          price: 0,
+          points: "434,449 459,449 459,496 434,496",
+        },
+        {
+          id: "I-23",
+          area: 0,
+          price: 0,
+          points: "459,449 483,449 483,496 459,496",
+        },
+        {
+          id: "I-24",
+          area: 0,
+          price: 0,
+          points: "483,449 508,449 508,496 483,496",
+        },
+        {
+          id: "I-25",
+          area: 0,
+          price: 0,
+          points: "508,449 532,449 532,496 508,496",
+        },
+        {
+          id: "I-26",
+          area: 0,
+          price: 0,
+          points: "532,449 557,449 557,496 532,496",
+        },
+        {
+          id: "I-27",
+          area: 0,
+          price: 0,
+          points: "557,449 581,449 581,496 557,496",
+        },
+        {
+          id: "I-28",
+          area: 0,
+          price: 0,
+          points: "581,449 606,449 606,496 581,496",
+        },
+        {
+          id: "J-01",
+          area: 0,
+          price: 0,
+          points: "258,527 283,527 283,572 258,572",
+        },
+        {
+          id: "J-02",
+          area: 0,
+          price: 0,
+          points: "283,527 308,527 308,572 283,572",
+        },
+        {
+          id: "J-03",
+          area: 0,
+          price: 0,
+          points: "308,527 333,527 333,572 308,572",
+        },
+        {
+          id: "J-04",
+          area: 0,
+          price: 0,
+          points: "333,527 357,527 357,572 333,572",
+        },
+        {
+          id: "J-05",
+          area: 0,
+          price: 0,
+          points: "357,527 382,527 382,572 357,572",
+        },
+        {
+          id: "J-06",
+          area: 0,
+          price: 0,
+          points: "382,527 407,527 407,572 382,572",
+        },
+        {
+          id: "J-07",
+          area: 0,
+          price: 0,
+          points: "407,527 432,527 432,572 407,572",
+        },
+        {
+          id: "J-08",
+          area: 0,
+          price: 0,
+          points: "432,527 457,527 457,572 432,572",
+        },
+        {
+          id: "J-09",
+          area: 0,
+          price: 0,
+          points: "457,527 482,527 482,572 457,572",
+        },
+        {
+          id: "J-10",
+          area: 0,
+          price: 0,
+          points: "482,527 507,527 507,572 482,572",
+        },
+        {
+          id: "J-11",
+          area: 0,
+          price: 0,
+          points: "507,527 531,527 531,572 507,572",
+        },
+        {
+          id: "J-12",
+          area: 0,
+          price: 0,
+          points: "531,527 556,527 556,572 531,572",
+        },
+        {
+          id: "J-13",
+          area: 0,
+          price: 0,
+          points: "556,527 581,527 581,572 556,572",
+        },
+        {
+          id: "J-14",
+          area: 0,
+          price: 0,
+          points: "581,527 606,527 606,572 581,572",
+        },
+        {
+          id: "J-15",
+          area: 0,
+          price: 0,
+          points: "258,572 283,572 283,618 258,618",
+        },
+        {
+          id: "J-16",
+          area: 0,
+          price: 0,
+          points: "283,572 308,572 308,618 283,618",
+        },
+        {
+          id: "J-17",
+          area: 0,
+          price: 0,
+          points: "308,572 333,572 333,618 308,618",
+        },
+        {
+          id: "J-18",
+          area: 0,
+          price: 0,
+          points: "333,572 357,572 357,618 333,618",
+        },
+        {
+          id: "J-19",
+          area: 0,
+          price: 0,
+          points: "357,572 382,572 382,618 357,618",
+        },
+        {
+          id: "J-20",
+          area: 0,
+          price: 0,
+          points: "382,572 407,572 407,618 382,618",
+        },
+        {
+          id: "J-21",
+          area: 0,
+          price: 0,
+          points: "407,572 432,572 432,618 407,618",
+        },
+        {
+          id: "J-22",
+          area: 0,
+          price: 0,
+          points: "432,572 457,572 457,618 432,618",
+        },
+        {
+          id: "J-23",
+          area: 0,
+          price: 0,
+          points: "457,572 482,572 482,618 457,618",
+        },
+        {
+          id: "J-24",
+          area: 0,
+          price: 0,
+          points: "482,572 507,572 507,618 482,618",
+        },
+        {
+          id: "J-25",
+          area: 0,
+          price: 0,
+          points: "507,572 531,572 531,618 507,618",
+        },
+        {
+          id: "J-26",
+          area: 0,
+          price: 0,
+          points: "531,572 556,572 556,618 531,618",
+        },
+        {
+          id: "J-27",
+          area: 0,
+          price: 0,
+          points: "556,572 581,572 581,618 556,618",
+        },
+        {
+          id: "J-28",
+          area: 0,
+          price: 0,
+          points: "581,572 606,572 606,618 581,618",
+        },
+      ]; // يمكن تعبئة area و price لكل دار هنا
+      const $ = (id) => document.getElementById(id),
+        fmt = (n) => Number(n).toLocaleString("ar-IQ");
+      const wa = (t) =>
+        "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t);
+      let block = null,
+        sel = null;
+
+      function stats() {
+        $("s-total").textContent = fmt(PLOTS.length);
+        $("s-blocks").textContent = fmt(
+          new Set(PLOTS.map((p) => p.id.split("-")[0])).size,
+        );
+      }
+      function blocks() {
+        const g = {};
+        PLOTS.forEach((p) => {
+          const b = p.id.split("-")[0];
+          g[b] = (g[b] || 0) + 1;
+        });
+        $("blocks").innerHTML = Object.keys(g)
+          .sort()
+          .map(
+            (b) =>
+              `<div class="blk" data-b="${b}"><h3>بلوك ${b}</h3><div class="n">${g[b]}</div><small>دار سكنية</small></div>`,
+          )
+          .join("");
+        document.querySelectorAll(".blk").forEach(
+          (el) =>
+            (el.onclick = () => {
+              block = el.dataset.b;
+              apply();
+              $("map").scrollIntoView();
+            }),
+        );
+      }
+      function draw() {
+        const s = $("svg");
+        PLOTS.forEach((p) => {
+          const el = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "polygon",
+          );
+          el.setAttribute("points", p.points);
+          el.setAttribute("class", "plot");
+          el.dataset.id = p.id;
+          el.onmousemove = (e) => {
+            const t = $("tip");
+            t.style.display = "block";
+            t.style.left = e.clientX + 14 + "px";
+            t.style.top = e.clientY + 14 + "px";
+            t.textContent =
+              "دار " + p.id + (+p.area ? " – " + p.area + " م²" : "");
+          };
+          el.onmouseleave = () => ($("tip").style.display = "none");
+          el.onclick = () => openPlot(p);
+          s.appendChild(el);
+        });
+      }
+      function apply() {
+        document.querySelectorAll(".plot").forEach((el) => {
+          el.classList.toggle(
+            "dim",
+            !!block && !el.dataset.id.startsWith(block + "-"),
+          );
+          el.classList.toggle("sel", el.dataset.id === sel);
+        });
+      }
+      function openPlot(p) {
+        sel = p.id;
+        apply();
+        $("mt").textContent = "دار رقم " + p.id;
+        $("mi").textContent =
+          "البلوك " +
+          p.id.split("-")[0] +
+          (+p.area ? " | المساحة: " + p.area + " م²" : "") +
+          (+p.price ? " | السعر: " + fmt(p.price) + " د.ع" : "");
+        $("wa").href = wa(
+          "أرغب بالاستفسار عن الدار رقم " + p.id + " في مجمع الأحرار السكني",
+        );
+        $("modal").style.display = "grid";
+      }
+      $("cl").onclick = () => {
+        $("modal").style.display = "none";
+        sel = null;
+        apply();
+      };
+      $("f-clr").onclick = () => {
+        block = null;
+        apply();
+      };
+      $("wa0").href = wa(
+        "السلام عليكم، أرغب بالاستفسار عن مجمع الأحرار السكني",
+      );
+      stats();
+      blocks();
+      draw();
+
+      /* --- نافذة مواصفات النموذج --- */
+      function openModel(name, card) {
+        $("mmTitle").textContent = "مواصفات النموذج " + name;
+        const img = card.querySelector("img"); // صورة البطاقة تبقى في أعلى النافذة
+        $("mmImg").style.display = img ? "block" : "none";
+        if (img) { $("mmImg").src = img.src; $("mmImg").alt = "النموذج " + name; }
+        const tpl = card.querySelector("template"); // القائمة والصورتان العموديتان
+        $("mmSpecs").innerHTML = tpl ? tpl.innerHTML : "";
+        const n = $("mmSpecs").querySelectorAll(".side-img").length; // عدد الصور الجانبية (2 أو 3 ...)
+        $("mmSpecs").style.setProperty("--imgs", n || 2);
+        $("modelModal").querySelector(".box").classList.toggle("wide", n > 2);
+        $("modelModal").style.display = "grid";
+      }
+      function closeModel() { $("modelModal").style.display = "none"; }
+      document.addEventListener("click", (e) => {
+        const card = e.target.closest(".stat.model");
+        if (!card) return;
+        e.preventDefault(); // يمنع انتقال الرابط <a href=""> المحيط بالبطاقة
+        openModel(card.dataset.model, card);
+      });
+      $("mmClose").onclick = closeModel;
+      $("modelModal").addEventListener("click", (e) => { if (e.target.id === "modelModal") closeModel(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModel(); });
+    </script>
+  </body>
+</html>
+          
